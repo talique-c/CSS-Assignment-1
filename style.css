@@ -1,0 +1,189 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway:wght@400;600&family=Tangerine:wght@400;700&display=swap');
+
+/* LAYOUT */
+
+/* General layout */
+html {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+/* Banner */
+header {
+	background: rgb(233,192,196);
+	background: radial-gradient(circle, rgba(233,192,196,1) 0%, rgba(225,224,232,1) 100%);
+	width: 100vw;
+	color: white;
+	border: #fff ridge 3px;
+}
+
+/* BODY LAYOUT */
+/* Class selector */
+.page-wrapper {
+	display: grid;
+	width: 80vw;
+	text-align: center;
+}
+
+/* ID selector */
+#css-zen-garden {
+	background-image: url(./img/header4.jpg);
+	background-repeat: round;
+}
+
+/* Targets all of the divs with main text */
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+	border: 5px ridge white;
+	border-radius: 15px;
+	background-color: #d9a4a9;
+  	padding: 1em;
+	margin: 1em;
+	margin-left: 22em;
+	width: 50%;
+  }
+
+  /* Sidebar */
+.sidebar {
+	margin-left: 600px; 
+	position: absolute; 
+	top: 0; 
+	right: 0;
+	}
+
+/* Descendant combinator */
+.sidebar .wrapper { 
+	font: 10px verdana, sans-serif; 
+	padding: 10px; 
+	margin-top: 150px; 
+	width: 130px;
+	background-color: #fff; 
+	border: #415420 3px dashed;
+	border-radius: 15px;
+	}
+
+.sidebar h3.select { 
+	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
+	margin: 10px 0 5px 0; 
+	width: 97px; 
+	height: 16px; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.archives { 
+	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:57px; 
+	height: 14px; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.resources { 
+	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:63px; 
+	height: 10px; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+/* TYPOGRAPHY */
+
+/* Type selector */
+h1,
+h2 {
+	font-family: Tangerine, cursive;
+}
+
+h3 {
+	font-family: Poppins, sans-serif;
+	color: #fff;
+	text-shadow: #997074 4px 4px;
+}
+p {
+	color: white;
+	font-family: Raleway, sans-serif;
+}
+
+/* Direct sibling combinator */
+header + .summary {
+	text-shadow: #997074 2px 2px;
+	font-weight: bolder;
+}
+
+/* Links */
+/* Pseudo element selector */
+a:link {
+    text-decoration: underline;
+	background-color: #bf7b81;
+	color: #fff;
+}
+
+a:visited, 
+a:focus {
+    text-decoration: underline;
+	background-color: #bf7b81;
+	color: #fff; 
+}
+
+a:hover {
+    background-color: #fff; 
+    color: #bf7b81; 
+}
+
+a:active {
+    background:#fff; 
+    color: #656161; 
+}
+
+/* Child combinator */
+.design-selection nav ul li > a {
+		background-color: #afc292;
+		border: #65616155 10px;
+	}
+
+.design-archives nav ul li > a {
+		background-color: #afc292;
+		border: #65616155 10px;
+	}
+
+.zen-resources ul li > a {
+		background-color: #afc292;
+		border: #65616155 10px;
+	}
+
+nav ul li {
+	list-style-type: none;
+}
+
+.zen-resources ul li {
+	list-style-type: none;
+}
+
+/*ANIMATIONS*/
+
+@keyframes appear {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+h1,
+h2 {
+    animation-name: appear;
+    animation-duration: 3s;
+}
